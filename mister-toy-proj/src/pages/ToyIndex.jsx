@@ -10,8 +10,7 @@ import { loadToys, setFilter } from "../store/actions/toy.action";
 export function ToyIndex() {
     const toys = useSelector(storeState => storeState.toyModule.toys)
     const filterBy = useSelector(storeState => storeState.toyModule.filterBy)
-    const isLoading = useSelector(storeState => storeState.toyModule.isLoading)
- console.log(isLoading);
+    const isLoading = useSelector(storeState => storeState.toyModule.flag.isLoading)
     useEffect(() => {
         loadToys()
         .catch(err => {
@@ -27,6 +26,7 @@ export function ToyIndex() {
        <section className="toy-index">
            <ToyFilter filterBy={filterBy} onSetFilter={onSetFilter}/>
            {isLoading && <Loader/>}
+           {!isLoading && <toyList toys={toys}/>}
        </section>
     )
 }

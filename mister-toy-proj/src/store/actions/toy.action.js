@@ -33,7 +33,7 @@ export function loadToys() {
     .finally(() => {
       setTimeout(() => {
         store.dispatch({ type: SET_IS_LOADING, isLoading: false })
-      }, 350)
+      }, 1000)
     })
 }
 
