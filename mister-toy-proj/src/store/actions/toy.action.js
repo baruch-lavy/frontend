@@ -18,11 +18,7 @@ export function loadToys() {
 
   return toyService
     .query(filterBy)
-    .then(res => {
-      console.log('res',res);
-      return res
-    })
-    .then(({ toys }) => {
+    .then(( toys ) => {
       store.dispatch({ type: SET_TOYS, toys })
     //   store.dispatch({ type: SET_MAX_PAGE, maxPage })
     })

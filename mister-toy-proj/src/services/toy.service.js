@@ -14,6 +14,7 @@ function query(filterBy = {}) {
 function getDefaultfilter(){
     return {
         txt: '',
+        price : 0,
         inStock: null,
         labels: [],
         pageIdx: 0,

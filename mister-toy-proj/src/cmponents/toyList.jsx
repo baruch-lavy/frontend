@@ -1,16 +1,16 @@
+import { ToyPreview } from "./ToyPreview"
 
 
-
-export function toyList({toys}) {
+export function ToyList({toys}) {
     return (
         <section className="toy-list">
-            {! toys.length ? (
+            {!toys.length ? (
                 <h1>It's empty here</h1>
             ) : (
                 <ul>
                     {toys.map(toy => (
                         <li key={toy._id}>
-                            <toyPreview toy={toy}/>
+                            <ToyPreview toy={toy}/>
                         </li>
                     ))}
                 </ul>

@@ -5,6 +5,8 @@ import { useEffectUpdate } from "../customHooks/useEffectUpdate";
 export function ToyFilter({ filterBy, onSetFilter }) {
   const [filterByToEdit, setFilterByToedit] = useState({ ...filterBy });
   const debounceOnSetFilter = useRef(debounce(onSetFilter, 300));
+  console.log('filterByToEdit',filterByToEdit);
+
   useEffectUpdate(() => {
     debounceOnSetFilter.current(filterByToEdit);
   }, [filterByToEdit]);

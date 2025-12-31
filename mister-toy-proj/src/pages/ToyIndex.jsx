@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch ,useSelector } from "react-redux"
 import  { Link } from "react-router-dom"
 
+import { ToyList } from "../cmponents/toyList";
 import { ToyFilter } from "../cmponents/ToyFilter";
 import { Loader } from "../cmponents/Loader";
 
@@ -26,7 +27,7 @@ export function ToyIndex() {
        <section className="toy-index">
            <ToyFilter filterBy={filterBy} onSetFilter={onSetFilter}/>
            {isLoading && <Loader/>}
-           {!isLoading && <toyList toys={toys}/>}
+           {!isLoading && <ToyList toys={toys}/>}
        </section>
     )
 }
