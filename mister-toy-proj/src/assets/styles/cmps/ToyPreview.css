@@ -1,0 +1,16 @@
+.toy-preview {
+    padding: 1em;
+    font-size: 1.2rem;
+    color: var(--gray2);
+}
+
+.toy-preview .toy-name {
+    font-size: 1.8rem;
+}
+
+.toy-preview .toy-price {
+    font-size: 1.8rem;
+}
+.toy-preview img {
+    max-height: 220px;
+}

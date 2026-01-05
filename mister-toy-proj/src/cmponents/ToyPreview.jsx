@@ -19,8 +19,8 @@ export function ToyPreview({ toy }) {
                  style={{display: isImgLoading ? 'none' : 'block'}}
                  />
             </div>
-            <h1>Price:{toy.price}$</h1>
-            <h1 style={{width:20 , height:20 , backgroundColor : toy.inStock ? "green" : 'red'}}></h1>
+            <h1 className="toy-price">Price:{toy.price}$</h1>
+            <h1 style={{width:20 , height:20 , backgroundColor : toy.inStock ? "green" : 'red', borderRadius: 50}}></h1>
         </article>
     )
 }

@@ -1,0 +1,4 @@
+.toy-index {
+    display: grid;
+    grid-template-rows: auto auto minmax(460px, 1fr) auto;
+}
